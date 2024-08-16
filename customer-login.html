@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Sign In - BizzBlock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="index.html" id="navbar__logo">BizzBlock</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="index.html" class="navbar__links">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="about.html" class="navbar__links">About</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="contact.html" class="navbar__links">Contact</a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="sign-up.html" class="button">Sign up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sign In Section -->
+    <div class="sign-in-container">
+        <div class="sign-in-box">
+            <h1>Customer Sign In</h1>
+            <form id="customerLoginForm" class="sign-in-form">
+                <label for="email-phone">Email or mobile phone number</label>
+                <input type="text" id="email-phone" name="email-phone" required>
+                
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="submit" class="button">Continue</button>
+                
+                <p class="privacy-notice">
+                    By continuing, you agree to BizzBlock's <a href="#">Conditions of Use</a> and <a href="#">Privacy Notice</a>.
+                </p>
+                
+                <a href="#" class="need-help">Need help?</a>
+            </form>
+        </div>
+
+        <div class="sign-in-footer">
+            <p>Are you a new customer?</p>
+            <a href="customer-signin.html" class="small-button">Create your BizzBlock account</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Terms of Service Privacy Policy Contact © 2024 BizzBlock. All rights reserved.</p>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+    document.getElementById('customerLoginForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+        let email = document.getElementById('email-phone').value;
+        let password = document.getElementById('password').value;
+
+        if (loginUser(email, password)) {
+            alert('Login successful! Redirecting to homepage...');
+            window.location.href = 'index.html';
+        }
+    });
+    </script>
+</body>
+</html>

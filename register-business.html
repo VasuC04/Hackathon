@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Your Business - BizzBlock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--navigation bar-->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">BizzBlock</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="index.html" class="navbar__links">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="about.html" class="navbar__links">About</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="contact.html" class="navbar__links">Contact</a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="sign-up.html" class="button">Sign up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Register Your Business Section -->
+    <div class="register-business">
+        <h1>Register Your Business</h1>
+        <form id="businessSignupForm" class="register-business__form">
+            <label for="business-name">Business Name:</label>
+            <input type="text" id="business-name" name="business-name" required>
+
+            <label for="owner-name">Owner Name:</label>
+            <input type="text" id="owner-name" name="owner-name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit" class="button">Submit</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Terms of Service Privacy Policy Contact © 2024 BizzBlock. All rights reserved.</p>
+    </footer>
+    <script src="app.js"></script>
+    <script>
+    document.getElementById('businessSignupForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+        let name = document.getElementById('owner-name').value;
+        let email = document.getElementById('email').value;
+        let password = document.getElementById('password').value;
+
+        if (registerUser(name, email, password)) {
+            alert('Signup successful! Redirecting to login page...');
+            window.location.href = 'business-login.html';
+        }
+    });
+    </script>
+</body>
+</html>

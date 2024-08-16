@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BizzBlock - Fundraising Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--navigation bar-->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">BizzBlock</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="index.html" class="navbar__links">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="about.html" class="navbar__links">About</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="contact.html" class="navbar__links">Contact</a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="sign-up.html" class="button">Sign up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--Hero section-->
+    <div class="main">
+        <div class="main__container">
+            <div class="main__content">
+                <h2>Fueling the Future of</h2>
+                <h1>Your Business</h1>
+                <button class="main__btn"><a href="#services">Let's get started</a></button>
+            </div>
+            <div class="main__img--container">
+                <img src="images/pic1.svg" alt="pic" id="main__img">
+            </div>
+        </div>
+    </div>
+
+    <!--Service section-->
+    <div class="services" id="services">
+        <h1>A glimpse at Our Mission</h1>
+        <div class="services__container">
+            <div class="services__bsnscard">
+                <h2>Empowering Businesses</h2>
+                <p>Fund using blockchain technology</p>
+                <a href="crowdfunding.html"><button>Start / Support a campaign</button></a>
+                <div class="ser__img__container">
+                    <img src="images/ser1.svg" alt="pic" id="ser__img__container">
+                </div>
+            </div>
+            <div class="services__bsnscard">
+                <h2>Business Broadcasting</h2>
+                <p>Provide doorstep services</p>
+                <a href="register-business.html"><button>Register your business</button></a>
+                <div class="ser__img__container">
+                    <img src="images/ser2.svg" alt="pic" id="ser__img__container">
+                </div>
+            </div>
+            <div class="services__ctmrcard">
+                <h2>Be the customer</h2>
+                <p>Ask for services</p>
+                <a href="businesses-services.html"><button>Find your solution</button></a>
+                <div class="ser__img__container">
+                    <img src="images/cst1.svg" alt="pic" id="ser__img__container">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Terms of Service Privacy Policy Contact © 2024 BizzBlock. All rights reserved.</p>
+    </footer>
+    <script src="app.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        let loggedInUser = checkLoggedInUser();
+
+        if (loggedInUser) {
+            let loginButton = document.querySelector('.navbar__btn a');
+            loginButton.innerText = 'Logout';
+            loginButton.setAttribute('href', '#');
+            loginButton.addEventListener('click', function() {
+                logoutUser();
+                window.location.reload();
+            });
+        }
+    });
+    </script>
+</body>
+</html>

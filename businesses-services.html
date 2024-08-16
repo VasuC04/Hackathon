@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Businesses & Services - BizzBlock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="index.html" id="navbar__logo">BizzBlock</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="index.html" class="navbar__links">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="about.html" class="navbar__links">About</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="contact.html" class="navbar__links">Contact</a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="sign-up.html" class="button">Sign up</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="cart/cart.html" class="button">
+                        <img src="images/cart-icon.png" alt="Cart" style="width: 30px; height: 30px; vertical-align: middle;">
+                        <span id="cart-count" style="position: absolute; top: -10px; right: -10px; background: red; color: white; border-radius: 50%; padding: 2px 6px; font-size: 12px;">0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Businesses & Services Section -->
+    <div class="businesses-services-container">
+        <h1>Our Businesses & Services</h1>
+        <div class="businesses-grid">
+            <!-- Business 1 Card -->
+            <div class="business-card">
+                <a href="business_img/business1.html">
+                    <img src="business_img/business1-logo.jpg" alt="Business 1 Logo">
+                    <h3>JK Wardrobe</h3>
+                </a>
+            </div>
+
+            <!-- Business 2 Card -->
+            <div class="business-card">
+                <a href="business_img/business2.html">
+                    <img src="business_img/business2-logo.jpg" alt="Business 2 Logo">
+                    <h3>Diamond Luxury</h3>
+                </a>
+            </div>
+
+            <!-- Business 3 Card -->
+            <div class="business-card">
+                <a href="business_img/business3.html">
+                    <img src="business_img/business3-logo.jpg" alt="Business 3 Logo">
+                    <h3>One Art Nation</h3>
+                </a>
+            </div>
+        </div>
+    </div>
+
+        <!-- Services Section -->
+    <div class="services-container">
+        <h1>Our Services</h1>
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="images/service1-logo.jpg" alt="Service 1 Icon">
+                <h3>A/C Repair</h3>
+            </div>
+            <div class="service-card">
+                <img src="images/service2-logo.jpg" alt="Service 2 Icon">
+                <h3>Hair Spa</h3>
+            </div>
+            <div class="service-card">
+                <img src="images/service3-logo.jpg" alt="Service 3 Icon">
+                <h3>Cleaning Services</h3>
+            </div> 
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Copyright © BizzBlock 2024</p>
+    </footer>
+
+    <script src="cart.js"></script>
+</body>
+</html>
